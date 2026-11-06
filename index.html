@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trafic - Normas de Tránsito</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- pantalla 1: inicio con el video de fondo -->
+  <div id="pantallaInicio">
+    <video id="videoFondo" src="videos/inicio.mp4" autoplay muted loop></video>
+
+    <div class="cartel">
+      <h1>TRAFIC</h1>
+      <p>Llegás a la esquina. ¿Pasás o cedés el paso?</p>
+      <p>Tu nombre</p>
+      <input type="text" id="nombre" maxlength="15">
+      <br>
+      <button id="botonJugar">Jugar</button>
+      <p id="avisoNombre"></p>
+    </div>
+  </div>
+
+  <!-- pantalla 2: el juego, con el video en pantalla completa -->
+  <div id="pantallaJuego">
+    <video id="video"></video>
+
+    <header>
+      Jugador: <b id="jugador"></b> |
+      Puntos: <b id="puntaje">0</b> |
+      <button id="botonConectar">Conectar Arduino</button>
+      <span id="estadoArduino"></span>
+    </header>
+
+    <!-- la pregunta aparece cuando el video se para -->
+    <div id="pregunta" class="caja">
+      <p id="numeroSituacion">Situación 1 de 5</p>
+      <h2 id="esquina">Esquina</h2>
+      <p id="situacion">Circulo por...</p>
+      <button id="botonA">Avanzo</button>
+      <button id="botonB">Cedo el paso</button>
+    </div>
+
+    <!-- el resultado aparece cuando termina el video -->
+    <div id="resultado" class="caja">
+      <h2 id="textoResultado"></h2>
+      <p id="explicacion"></p>
+      <button id="botonSiguiente">Siguiente</button>
+    </div>
+  </div>
+
+  <!-- pantalla 3: el final -->
+  <div id="pantallaFinal">
+    <h2 id="tituloFinal">¡Terminaste!</h2>
+    <p>Puntos: <b id="puntosFinal">0</b></p>
+    <p>Acertaste el <b id="porcentaje">0%</b> de las esquinas</p>
+
+    <div class="grafico"><canvas id="grafico"></canvas></div>
+
+    <h3>Tus respuestas</h3>
+    <ol id="historial"></ol>
+    <br>
+    <button id="botonReiniciar">Jugar de nuevo</button>
+  </div>
+
+  <!-- libreria para hacer las graficas -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

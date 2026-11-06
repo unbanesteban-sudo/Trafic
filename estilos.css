@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0b1320;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+button {
+  font-size: 20px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+/* los videos ocupan toda la pantalla */
+#videoFondo, #video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+/* al principio solo se ve la pantalla de inicio */
+#pantallaJuego, #pantallaFinal, #pregunta, #resultado {
+  display: none;
+}
+
+/* inicio */
+.cartel {
+  position: relative;
+  width: 500px;
+  margin: 150px auto;
+  padding: 30px;
+  background-color: #0b1320;
+}
+
+h1 {
+  font-size: 70px;
+  margin: 0;
+}
+
+#nombre {
+  font-size: 22px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+#avisoNombre {
+  color: red;
+}
+
+/* juego */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #0b1320;
+}
+
+/* la caja de la pregunta y del resultado, abajo, encima del video */
+.caja {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #0b1320;
+}
+
+/* final */
+.grafico {
+  width: 400px;
+  margin: 20px auto;
+  background-color: white;
+}
+
+#historial {
+  display: inline-block;
+  text-align: left;
+}
